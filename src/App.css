@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-image: url('./photo/pexels-kaique-rocha-125510.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input{
+  padding: 15px;
+  width: 80%;
+  margin: auto;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  font-size: 16px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input:focus{
+  outline: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.weather-data{
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+  flex-wrap: wrap;
+  border-radius: 26px;
+  background: linear-gradient(100deg,rgba(217,217,217,0.6)0%,rgba(255,255,255,0.24)0.01%, rgba(255,255,255,0.06)100%);
+  box-shadow: 0px 4px 24px -1px rgba(0,0,0,0.2);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  z-index: 2;
+  width: 600px;
+
+}
+
+.city{
+  font-size: 30px;
+  font-weight: 200;
+  background: transparent;
+  box-shadow: 0px 2px 21px rgba(0,0,0,0.25);
+  border-radius: 26px;
+  padding: 48px;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  font-weight: bold;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.temp{
+  font-size: 90px;
+  padding: 10px;
+  background: transparent;
+  box-shadow: 0px 2px 21px rgba(0,0,0,0.25);
+  border-radius: 26px;
+  padding: 48px;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  font-weight: bold;
+  color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather{
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  box-shadow: 0px 2px 21px rgba(0,0,0,0.25);
+  border-radius: 26px;
+  padding: 48px;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+.welcome{
+  margin-bottom: 500px;
+  background-color: white;
+  border-radius: 15px;
+  opacity: 0.8;
+  padding: 15px;
+}
+.welcome>p{
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+.error{
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: white;
+  border-radius: 15px;
+  opacity: 0.8;
+  padding: 15px;
+  position: absolute;
+  top: 60%;
 }
